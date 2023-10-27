@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+    <h:outputLabel value="Введення початкових даних"/>
+
+
+<h:body>
+    <h:form>
+         <h:panelGrid columns="2">
+
+            <h:outputLabel value="a:"/>
+            <h:inputText id="a" value="#{calculatorBean.a}" />
+
+            <h:outputLabel value="b:"/>
+            <h:inputText id="b" value="#{calculatorBean.b}" />
+
+            <h:outputLabel value="c:"/>
+            <h:inputText id="c" value="#{calculatorBean.c}" />
+
+            <h:outputLabel value="Початок діапазону:"/>
+            <h:inputText id="start" value="#{calculatorBean.start}" />
+
+            <h:outputLabel value="Кінець діапазону:"/>
+            <h:inputText id="end" value="#{calculatorBean.end}" />
+
+            <h:outputLabel value="Крок зміни аргумента:"/>
+            <h:inputText id="step" value="#{calculatorBean.step}" />
+        </h:panelGrid>
+        <h:commandButton value="Calculate" action="#{calculatorBean.calculate}" />
+    </h:form>
+</h:body>
+</f:view>
+</html>
